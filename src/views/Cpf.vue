@@ -1,5 +1,5 @@
 <template>
-    <div>{{ cpf | cpf }}</div>
+    <div>{{ cpf | cpf | inverter }}</div>
 </template>
 
 <script>
