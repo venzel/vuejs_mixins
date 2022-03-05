@@ -1,18 +1,22 @@
 <template>
-    <div>{{ cpf | cpf | inverter }}</div>
+    <div>
+        <div>{{ cpf | cpf | inverter }}</div>
+        <hr />
+        <div>
+            <input type="text" :value="cpf | cpf" />
+        </div>
+        <hr />
+        <div>
+            <input type="text" v-model="fruit" />
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
     filters: {
         cpf(value) {
-            const arr = value.split('');
-
-            arr.splice(3, 0, '.');
-            arr.splice(7, 0, '.');
-            arr.splice(11, 0, '-');
-
-            return arr.join('');
+            return value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
         },
     },
     data() {
