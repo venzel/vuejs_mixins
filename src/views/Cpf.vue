@@ -7,7 +7,7 @@
         </div>
         <hr />
         <div>
-            <input type="text" v-model="fruit" />
+            <input type="text" v-model="cpf" />
         </div>
     </div>
 </template>
